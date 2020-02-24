@@ -16,7 +16,7 @@ const Logo = () => {
   return (
     <img
       alt="logo-pemalangnotebook"
-      src={data.placeholderImage.childImageSharp.fluid.src}
+      src={data?.placeholderImage?.childImageSharp?.fluid?.src}
     />
   )
 }
