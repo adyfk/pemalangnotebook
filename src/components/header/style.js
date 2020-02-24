@@ -2,7 +2,6 @@ import makeStyles from "@material-ui/core/styles/makeStyles"
 import { fade } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(theme => {
-  console.log(theme, theme.spacing())
   return {
     appBar: {
       backgroundColor: theme.color.white,
