@@ -20,6 +20,7 @@ const Logo = () => {
     }
     getImage()
   }, [])
+  console.log(src, "=========")
   return <img alt="logo-pemalangnotebook" src={src}></img>
 }
 
