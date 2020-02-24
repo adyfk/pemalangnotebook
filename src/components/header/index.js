@@ -5,15 +5,14 @@ import InputBase from "@material-ui/core/InputBase"
 import SearchIcon from "@material-ui/icons/Search"
 import useStyles from "./style"
 import TextButton from "../elements/TextButton"
-import IMAGES from "../../assets"
+import Logo from "./Image/Logo"
 export default function PrimarySearchAppBar() {
   const classes = useStyles()
-
   return (
     <div className={classes.grow}>
       <AppBar classes={{ root: classes.appBar }} position="static">
         <Toolbar>
-          <img alt="logo-pemalangnotebook" src={IMAGES.LOGO}></img>
+          <Logo />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <TextButton to="/" className={classes.menuAppbar}>
