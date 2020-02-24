@@ -1,20 +1,24 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 const Logo = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+          original {
+            src
           }
         }
       }
     }
   `)
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <img
+      alt="logo-pemalangnotebook"
+      src={data.placeholderImage.childImageSharp.original.src}
+    ></img>
+  )
 }
 
 export default Logo
