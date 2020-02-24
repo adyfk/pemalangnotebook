@@ -1,6 +1,9 @@
 import React from "react"
-import BrowserRouter from "react-router-dom/BrowserRouter"
+import { BrowserRouter as Router } from "react-router-dom"
 
-export const wrapRootElement = ({ element }) => {
-  return <BrowserRouter>{element}</BrowserRouter>
+export const replaceRouterComponent = ({ history }) => {
+  const RouterWrapper = ({ children }) => (
+    <Router history={history}>{children}</Router>
+  )
+  return RouterWrapper
 }
