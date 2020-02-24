@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 const Logo = () => {
   const data = useStaticQuery(graphql`
@@ -14,7 +13,12 @@ const Logo = () => {
       }
     }
   `)
-  return <img src={data.placeholderImage.childImageSharp.fluid.src} />
+  return (
+    <img
+      alt="logo-pemalangnotebook"
+      src={data.placeholderImage.childImageSharp.fluid.src}
+    />
+  )
 }
 
 export default Logo
