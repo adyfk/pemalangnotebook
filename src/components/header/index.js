@@ -16,11 +16,15 @@ export default function PrimarySearchAppBar() {
           <img alt="logo-pemalangnotebook" src={IMAGES.LOGO}></img>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <TextButton className={classes.menuAppbar}>Dashboard</TextButton>
+            <TextButton to="/" className={classes.menuAppbar}>
+              Dashboard
+            </TextButton>
             <TextButton className={classes.menuAppbar}>Category</TextButton>
             <TextButton className={classes.menuAppbar}>Laptop</TextButton>
             <TextButton className={classes.menuAppbar}>Accessories</TextButton>
-            <TextButton className={classes.menuAppbar}>Merchandise</TextButton>
+            <TextButton to="#" className={classes.menuAppbar}>
+              Merchandise
+            </TextButton>
           </div>
           <div className={classes.searchDesktop}>
             <InputBase

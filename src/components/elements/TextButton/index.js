@@ -1,6 +1,6 @@
 import React from "react"
+import { push } from "gatsby"
 import Typography from "@material-ui/core/Typography"
-import { withRouter } from "react-router-dom"
 
 function TextButton({ children, to, history, ...rest }) {
   const props = {
@@ -10,7 +10,7 @@ function TextButton({ children, to, history, ...rest }) {
   }
   if (to)
     props.onClick = () => {
-      history.push(to)
+      push(to)
     }
   return (
     <Typography
@@ -24,4 +24,4 @@ function TextButton({ children, to, history, ...rest }) {
   )
 }
 
-export default withRouter(TextButton)
+export default TextButton
