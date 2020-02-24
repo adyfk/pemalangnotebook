@@ -1,10 +1,11 @@
 import makeStyles from "@material-ui/core/styles/makeStyles"
 import { fade } from "@material-ui/core/styles"
+import CONSTANT from "../../constants"
 
 const useStyles = makeStyles(theme => {
   return {
     appBar: {
-      backgroundColor: theme.color.white,
+      backgroundColor: CONSTANT.COLOR.white,
       boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25);",
     },
     grow: {
@@ -12,9 +13,9 @@ const useStyles = makeStyles(theme => {
     },
     menuAppbar: {
       "&:hover": {
-        color: fade(theme.color.black, 2),
+        color: fade(CONSTANT.COLOR.black, 2),
       },
-      color: theme.color.grey,
+      color: CONSTANT.COLOR.grey,
       padding: theme.spacing(1.1),
     },
     title: {
@@ -39,7 +40,7 @@ const useStyles = makeStyles(theme => {
       },
     },
     searchIcon: {
-      color: theme.color.black,
+      color: CONSTANT.COLOR.black,
       width: theme.spacing(7),
       height: "100%",
       position: "absolute",
@@ -55,11 +56,11 @@ const useStyles = makeStyles(theme => {
     },
     inputInput: {
       "&::placeholder": {
-        color: theme.color.black,
+        color: CONSTANT.COLOR.black,
       },
-      color: theme.color.black,
+      color: CONSTANT.COLOR.black,
       padding: theme.spacing(1, 4, 1, 1),
-      background: theme.color.greyLight,
+      background: CONSTANT.COLOR.greyLight,
       borderRadius: theme.spacing(1),
       transition: theme.transitions.create("width"),
       width: "100%",
