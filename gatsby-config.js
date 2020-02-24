@@ -13,6 +13,8 @@ module.exports = {
         stylesProvider: {
           injectFirst: true,
         },
+        disableAutoprefixing: false,
+        disableMinification: false,
       },
     },
     `gatsby-plugin-react-helmet`,
