@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
+import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 
 const Logo = () => {
-  const [src, setSrc] = useState("")
-  useEffect(() => {
-    async function getImage() {
-      const data = await graphql`
+  return (
+    <StaticQuery
+      query={graphql`
         query {
           placeholderImage: file(relativePath: { eq: "logo.png" }) {
             childImageSharp {
@@ -15,13 +14,17 @@ const Logo = () => {
             }
           }
         }
-      `
-      setSrc(data.placeholderImage.childImageSharp.original.src)
-    }
-    getImage()
-  }, [])
-  console.log(src, "=========")
-  return <img alt="logo-pemalangnotebook" src={src}></img>
+      `}
+      render={data => {
+        return (
+          <img
+            alt="logo-pemalangnotebook"
+            src={data.placeholderImage.childImageSharp.original.src}
+          ></img>
+        )
+      }}
+    ></StaticQuery>
+  )
 }
 
 export default Logo
