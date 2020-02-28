@@ -6,7 +6,7 @@ const Logo = () => {
     <StaticQuery
       query={graphql`
       query{
-        allImageSharp(filter: {original: {src: {regex: "/logo/"}}}) {
+        allImageSharp {
           edges {
             node {
               original {
