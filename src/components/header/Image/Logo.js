@@ -16,10 +16,11 @@ const Logo = () => {
         }
       `}
       render={data => {
+        console.log(data,'==========')
         return (
           <img
             alt="logo-pemalangnotebook"
-            src={data.placeholderImage.childImageSharp.original.src}
+            src={data?.placeholderImage?.childImageSharp?.original?.src}
           ></img>
         )
       }}
