@@ -5,14 +5,17 @@ const Logo = () => {
   return (
     <StaticQuery
       query={graphql`
-      query MyQuery {
-        imageSharp(fixed: {originalName: {eq: "logo.png"}}) {
-          original {
-            src
+      query{
+        allImageSharp(filter: {original: {src: {regex: "/logo/"}}}) {
+          edges {
+            node {
+              original {
+                src
+              }
+            }
           }
         }
-      }
-      `}
+      }`}
       render={data => {
 console.log(data)
        return  <img
