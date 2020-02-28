@@ -6,9 +6,9 @@ const Logo = () => {
     <StaticQuery
       query={graphql`
         query {
-          placeholderImage: file(relativePath: { eq: "logo.png" }) {
-            childImageSharp {
-              original {
+          allImageSharp(filter:{fixed:{originalName:{eq:"logo.png"}}}){
+            nodes{
+              original{
                 src
               }
             }
@@ -16,11 +16,11 @@ const Logo = () => {
         }
       `}
       render={data => {
-        console.log(data,'==========')
+        console.log
         return (
           <img
             alt="logo-pemalangnotebook"
-            src={data?.placeholderImage?.childImageSharp?.original?.src}
+            src={data.allImageSharp.nodes.original.src}
           ></img>
         )
       }}
