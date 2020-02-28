@@ -20,7 +20,7 @@ const Logo = () => {
 console.log(data)
        return  <img
         alt="logo-pemalangnotebook"
-        src={data.allImageSharp.edges[0].node.original.src}
+        src={data.allImageSharp?.edges?.[0].node?.original?.src}
         ></img>
       }}
     ></StaticQuery>
