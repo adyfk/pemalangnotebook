@@ -5,13 +5,14 @@ const Logo = () => {
   return (
     <StaticQuery
       query={graphql`
-      query{
-          imageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid
-            }
+      query MyQuery {
+        imageSharp(fixed: {originalName: {eq: "logo.png"}}) {
+          original {
+            src
           }
-      }`}
+        }
+      }
+      `}
       render={data => {
 console.log(data)
        return  <img
