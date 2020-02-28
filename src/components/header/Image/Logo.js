@@ -6,18 +6,21 @@ const Logo = () => {
     <StaticQuery
       query={graphql`
       query{
-        imageSharp(fixed: {originalName: {eq: "logo.png"}}) {
-          original {
-            src
+        allImageSharp(filter:{fixed:{originalName:{eq:"logo.png"}}}){
+          nodes{
+            original{
+              src
+            }
           }
         }
       }`}
-      render={data => (
-          <img
-            alt="logo-pemalangnotebook"
-            src={data.imageSharp.original.src}
-          ></img>
-        )}
+      render={data => {
+console.log(data)
+       return  <img
+        alt="logo-pemalangnotebook"
+        src={data.allImageSharp.nodes[0].original.src}
+        ></img>
+      }}
     ></StaticQuery>
   )
 }
