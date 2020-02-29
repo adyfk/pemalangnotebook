@@ -13,14 +13,12 @@ const Logo = () => {
           }
         }
       `}
-      render={data => {
-        return (
-          <img
-            alt="logo-pemalangnotebook"
-            src={data.imageSharp.original.src}
-          ></img>
-        )
-      }}
+      render={data => (
+        <img
+          alt="logo-pemalangnotebook"
+          src={data.imageSharp.original.src}
+        ></img>
+      )}
     ></StaticQuery>
   )
 }
