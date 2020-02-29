@@ -11,7 +11,7 @@ module.exports = {
       // If you want to use styled components you should change the injection order.
       options: {
         stylesProvider: {
-          injectFirst: true,
+          injectFirst: false,
         },
         disableAutoprefixing: false,
         disableMinification: false,
