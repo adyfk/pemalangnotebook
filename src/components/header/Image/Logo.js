@@ -5,24 +5,21 @@ const Logo = () => {
   return (
     <StaticQuery
       query={graphql`
-      query{
-        allImageSharp {
-          edges {
-            node {
-              original {
-                src
-              }
+        query {
+          imageSharp(original: { src: { regex: "/logo-pemalang-notebook/" } }) {
+            original {
+              src
             }
           }
         }
-      }`}
+      `}
       render={data => {
-console.log(data)
-       return  <img
-        alt="logo-pemalangnotebook"
-        src=""
-        // src={data.allImageSharp.edges[0].node.original.src}
-        ></img>
+        return (
+          <img
+            alt="logo-pemalangnotebook"
+            src={data.imageSharp.original.src}
+          ></img>
+        )
       }}
     ></StaticQuery>
   )
