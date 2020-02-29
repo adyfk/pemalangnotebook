@@ -11,16 +11,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: "gatsby-plugin-material-ui",
-      options: {
-        disableAutoprefixing: true,
-        disableMinification: true,
-        //   // stylesProvider: {
-        //   //   injectFirst: true,
-      },
-      // },
-    },
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
