@@ -8,7 +8,6 @@ import theme from "../../src/theme"
 export default function TopLayout(props) {
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
       <Helmet>
         <meta
           name="viewport"
