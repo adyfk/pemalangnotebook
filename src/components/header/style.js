@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => {
     },
     menuAppbar: {
       "&:hover": {
-        color: fade(CONSTANT.COLOR.black, 2),
+        color: fade(CONSTANT.COLOR.black, 1),
       },
       color: CONSTANT.COLOR.grey,
       padding: theme.spacing(1.1),

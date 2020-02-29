@@ -6,7 +6,7 @@ import SearchIcon from "@material-ui/icons/Search"
 import useStyles from "./style"
 import TextButton from "../elements/TextButton"
 import Logo from "./Image/Logo"
-export default function PrimarySearchAppBar() {
+export default function Header() {
   const classes = useStyles()
   return (
     <div className={classes.grow}>
