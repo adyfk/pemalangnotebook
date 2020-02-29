@@ -7,7 +7,7 @@ import theme from "../../src/theme"
 
 export default function TopLayout(props) {
   return (
-    <ThemeProvider theme={theme}>
+    <React.Fragment>
       <Helmet>
         <meta
           name="viewport"
@@ -18,9 +18,8 @@ export default function TopLayout(props) {
           rel="stylesheet"
         />
       </Helmet>
-
-      {props.children}
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+    </React.Fragment>
   )
 }
 
