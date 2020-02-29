@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-material-ui",
       options: {
-        disableAutoprefixing: false,
-        disableMinification: false,
+        disableAutoprefixing: true,
+        disableMinification: true,
         //   // stylesProvider: {
         //   //   injectFirst: true,
       },
