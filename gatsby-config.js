@@ -5,7 +5,19 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    "gatsby-plugin-top-layout",
+    `gatsby-plugin-top-layout`,
+    `gatsby-plugin-netlify`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: "gatsby-plugin-material-ui",
+      options: {
+        disableAutoprefixing: false,
+        disableMinification: false,
+        //   // stylesProvider: {
+        //   //   injectFirst: true,
+      },
+      // },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -14,7 +26,6 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

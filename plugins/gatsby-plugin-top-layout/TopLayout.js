@@ -2,30 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import CssBaseline from "@material-ui/core/CssBaseline"
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles"
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      light: "#67bdff",
-      main: "#208dd7",
-      dark: "#0060a5",
-    },
-    secondary: {
-      main: "#f0820d",
-      light: "#ffb247",
-      dark: "#b75400",
-    },
-    text: {
-      primary: "#ffffff",
-      secondary: "#ffffff",
-    },
-  },
-})
+import { ThemeProvider } from "@material-ui/core/styles"
+import theme from "../../src/theme"
 
 export default function TopLayout(props) {
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Helmet>
         <meta
           name="viewport"
@@ -36,12 +19,9 @@ export default function TopLayout(props) {
           rel="stylesheet"
         />
       </Helmet>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
-        {props.children}
-      </ThemeProvider>
-    </React.Fragment>
+
+      {props.children}
+    </ThemeProvider>
   )
 }
 
