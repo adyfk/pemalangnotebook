@@ -6,17 +6,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-top-layout",
-    {
-      resolve: "gatsby-plugin-material-ui",
-      // If you want to use styled components you should change the injection order.
-      options: {
-        stylesProvider: {
-          injectFirst: false,
-        },
-        disableAutoprefixing: false,
-        disableMinification: false,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
