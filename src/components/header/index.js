@@ -1,13 +1,14 @@
-import React from "react"
-import AppBar from "@material-ui/core/AppBar"
-import Toolbar from "@material-ui/core/Toolbar"
-import InputBase from "@material-ui/core/InputBase"
-import SearchIcon from "@material-ui/icons/Search"
-import useStyles from "./style"
-import TextButton from "../elements/TextButton"
-import Logo from "./Image/Logo"
+import React from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import InputBase from '@material-ui/core/InputBase';
+import SearchIcon from '@material-ui/icons/Search';
+import useStyles from './style';
+import TextButton from '../elements/textButton';
+import Logo from './Image/Logo';
+
 export default function Header() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
     <div className={classes.grow}>
       <AppBar classes={{ root: classes.appBar }} position="static">
@@ -32,7 +33,7 @@ export default function Header() {
                 root: classes.inputRoot,
                 input: classes.inputInput,
               }}
-              inputProps={{ "aria-label": "search" }}
+              inputProps={{ 'aria-label': 'search' }}
             />
             <div className={classes.searchIcon}>
               <SearchIcon />
@@ -41,7 +42,7 @@ export default function Header() {
         </Toolbar>
       </AppBar>
     </div>
-  )
+  );
 }
 
 /* <IconButton
