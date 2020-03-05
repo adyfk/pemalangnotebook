@@ -58,7 +58,7 @@ const Product = () => {
         <Grid item lg={9} md={9} xs={12} sm={12}>
           <Router basepath="/product">
             <Accessories path="/accessories" />
-            <Laptop path="/laptop/:brand" />
+            <Laptop path="/:brand/:series" />
             <Marchandise path="/marchandise" />
           </Router>
         </Grid>

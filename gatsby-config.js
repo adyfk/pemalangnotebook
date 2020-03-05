@@ -57,6 +57,7 @@ module.exports = {
           '**/taxonomies',
           '**/users',
           '**/laptop',
+          '**/other',
         ],
         excludedRoutes: ['**/posts/1456'],
         keepMediaSizes: false,

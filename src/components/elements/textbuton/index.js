@@ -1,9 +1,9 @@
 import React from 'react';
-import { push } from 'gatsby';
+import { navigate } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
-function TextButton({
-  children, to, history, ...rest
+function TextButon({
+  children, to, ...rest
 }) {
   const props = {
     classes: rest.classes || {},
@@ -12,7 +12,7 @@ function TextButton({
   };
   if (to) {
     props.onClick = () => {
-      push(to);
+      navigate(to);
     };
   }
   return (
@@ -27,4 +27,4 @@ function TextButton({
   );
 }
 
-export default TextButton;
+export default TextButon;

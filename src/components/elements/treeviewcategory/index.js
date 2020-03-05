@@ -4,9 +4,9 @@ import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
-import { Link } from 'gatsby';
 import { Grid } from '@material-ui/core';
 import { capitalize } from '../../../utils';
+import TextButton from '../textbuton';
 
 const useStyles = makeStyles({
   root: {
@@ -24,7 +24,7 @@ export default function RecursiveTreeView(props) {
   function label({ nodes, bool }) {
     let to = `/${nodes.name}`;
     if (nodes.parent) to = `/${nodes.parent}${to}`;
-    if (!bool) return <Link to={`/product${to}`}>{capitalize(nodes.name)}</Link>;
+    if (!bool) return <TextButton to={`/product${to}`}>{capitalize(nodes.name)}</TextButton>;
     return (
       <Grid container alignItems="center">
         <Grid item>{capitalize(nodes.name)}</Grid>

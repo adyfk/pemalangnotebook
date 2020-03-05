@@ -22,6 +22,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    "strict": 0,
     "linebreak-style": 0,
     "react/jsx-filename-extension":0,
     "max-len":0,

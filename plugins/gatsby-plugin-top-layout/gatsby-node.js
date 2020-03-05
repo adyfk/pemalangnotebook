@@ -1,19 +1,6 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const path = require('path');
 const slash = require('slash');
 
-// Implement the Gatsby API “createPages”. This is
-// called after the Gatsby bootstrap is finished so you have
-// access to any information necessary to programmatically
-// create pages.
-// Will create pages for WordPress pages (route : /{slug})
-// Will create pages for WordPress posts (route : /post/{slug})
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -58,6 +45,22 @@ exports.createPages = async ({ graphql, actions }) => {
               }
             }
           }  
+          allWordpressWpOther {
+            nodes {
+              slug
+              title
+              content
+              categories {
+                name
+                slug
+              }
+              acf {
+                price
+                available
+              }
+              modified
+            }
+          }
     }
   `);
 
@@ -74,7 +77,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const series = context.categories[0].slug;
     const name = context.slug;
     createPage({
-      path: `/product/laptop/${brand}/${series}/${name}`,
+      path: `/product/${brand}/${series}/${name}`,
       component: slash(
         LaptopDetail,
       ),
@@ -86,7 +89,30 @@ exports.createPages = async ({ graphql, actions }) => {
           price: context.acf.price,
           image: [
             context.acf.image1, context.acf.image2, context.acf.image3, context.acf.image4,
-          ],
+          ].filter((image) => Boolean(image)),
+        },
+      },
+    });
+  });
+  const { allWordpressWpOther } = result.data;
+  allWordpressWpOther.nodes.forEach((node) => {
+    const { ...context } = node;
+    const category = context.categories[0].slug;
+    const name = context.slug;
+    createPage({
+      path: `/product/${category}/${name}`,
+      component: slash(
+        LaptopDetail,
+      ),
+      exact: true,
+      context: {
+        ...context,
+        acf: {
+          available: context.acf.available,
+          price: context.acf.price,
+          image: [
+            context.acf.image1, context.acf.image2, context.acf.image3, context.acf.image4,
+          ].filter((image) => Boolean(image)),
         },
       },
     });

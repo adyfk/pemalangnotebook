@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import useStyles from './style';
-import TextButton from '../elements/textButton';
+import TextButton from '../elements/textbuton';
 import Logo from './Image/Logo';
 
 export default function Header() {
