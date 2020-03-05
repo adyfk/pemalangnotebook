@@ -67,14 +67,14 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const { allWordpressWpLaptop } = result.data;
-  const LaptopDetail = path.resolve('./src/components/template/laptop-detail/component.js');
+  const LaptopDetail = path.resolve('./src/components/template/detail-product/component.js');
   allWordpressWpLaptop.nodes.forEach((node) => {
     const { ...context } = node;
     const brand = context.categories[0].parent_element.slug;
     const series = context.categories[0].slug;
     const name = context.slug;
     createPage({
-      path: `/product/laptop/${brand}-${series}-${name}`,
+      path: `/product/laptop/${brand}/${series}/${name}`,
       component: slash(
         LaptopDetail,
       ),

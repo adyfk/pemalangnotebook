@@ -1,9 +1,10 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from "./header/index"
-import { CssBaseline } from "@material-ui/core"
+import { CssBaseline } from '@material-ui/core';
+import Header from './header/index';
+import Container from './elements/container';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,24 +15,25 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <React.Fragment>
+    <>
       <CssBaseline />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Container>{children}</Container>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
+        ©
+        {new Date().getFullYear()}
+        , Built with
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
-    </React.Fragment>
-  )
-}
+    </>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
