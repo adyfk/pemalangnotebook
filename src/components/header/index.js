@@ -19,12 +19,8 @@ export default function Header() {
             <TextButton to="/" className={classes.menuAppbar}>
               Dashboard
             </TextButton>
-            <TextButton className={classes.menuAppbar}>Category</TextButton>
-            <TextButton className={classes.menuAppbar}>Laptop</TextButton>
-            <TextButton className={classes.menuAppbar}>Accessories</TextButton>
-            <TextButton to="#" className={classes.menuAppbar}>
-              Merchandise
-            </TextButton>
+            <TextButton className={classes.menuAppbar}>Product</TextButton>
+            <TextButton className={classes.menuAppbar}>About Use</TextButton>
           </div>
           <div className={classes.searchDesktop}>
             <InputBase
