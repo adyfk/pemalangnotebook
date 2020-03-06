@@ -6,6 +6,7 @@ import Accessories from '../container/accessories';
 import Laptop from '../container/laptop';
 import Marchandise from '../container/marchandise';
 import Treeview from '../components/elements/treeviewcategory';
+import BreadCrumb from '../components/elements/breadcrumb';
 import Layout from '../components/layout';
 
 const Product = () => {
@@ -43,6 +44,9 @@ const Product = () => {
   return (
     <Layout>
       <Grid container>
+        <Grid item lg={12} md={12} xs={12} sm={12}>
+          <BreadCrumb />
+        </Grid>
         <Grid item lg={3} md={3} xs={12} sm={12}>
           <Treeview
             expands={Object.keys(laptopCategory)}

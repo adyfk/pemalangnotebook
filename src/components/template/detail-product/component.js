@@ -1,13 +1,13 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Container from '../../elements/container';
 import BreadCrumb from '../../elements/breadcrumb';
+import Layout from '../../layout';
 
 export default function LaptopDetail(props) {
   return (
-    <Container style={{ backgroundColor: 'red' }}>
+    <Layout>
+      {JSON.stringify(props.pageContext, null, 4)}
       <Grid container>
-        {JSON.stringify(props.pageContext, null, 10)}
         <Grid item lg={12} md={12} sm={12} xs={12}>
           <BreadCrumb />
         </Grid>
@@ -25,6 +25,6 @@ export default function LaptopDetail(props) {
           Describe
         </Grid>
       </Grid>
-    </Container>
+    </Layout>
   );
 }

@@ -1,26 +1,22 @@
 import React from 'react';
-import { Breadcrumbs, Link, Typography } from '@material-ui/core';
+import { Breadcrumbs, Typography } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
+import TextButton from '../textbuton';
 
 export default function BreadCrumb() {
-  // const locationPath = location.pathname.split('/').slice(1);
-  const locationPath = ['laptop', 'lenovo', 'yoga'];
+  const locationPath = location.pathname.split('/').slice(1);
   const locationNow = locationPath.pop();
   return (
     <Breadcrumbs separator={<NavigateNextIcon fontSize="small" />} aria-label="breadcrumb">
-      <Link color="inherit" href="/">
+      <TextButton to="/">
         Dashboard
-      </Link>
+      </TextButton>
       {locationPath.map((path, index) => {
         const linkPath = [];
         Array.from({ length: index + 1 }).forEach((item, i) => {
           linkPath.push(locationPath[i]);
         });
-        return (
-          <Link color="inherit" href={`/${linkPath.join('/')}`}>
-            {path}
-          </Link>
-        );
+        return <Typography>{path}</Typography>;
       })}
       <Typography color="textPrimary">{locationNow}</Typography>
     </Breadcrumbs>
