@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../../src/theme';
+import '../../src/styles/global.css';
 
 export default function TopLayout(props) {
   return (
