@@ -1,9 +1,11 @@
 import React from 'react';
+import { globalHistory } from '@reach/router';
 import { Breadcrumbs, Typography } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import TextButton from '../textbuton';
 
 export default function BreadCrumb() {
+  const { location } = globalHistory;
   const locationPath = location.pathname.split('/').slice(1);
   const locationNow = locationPath.pop();
   return (

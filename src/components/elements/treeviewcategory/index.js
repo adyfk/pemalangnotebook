@@ -5,6 +5,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import TreeItem from '@material-ui/lab/TreeItem';
 import { Grid } from '@material-ui/core';
+import { globalHistory } from '@reach/router';
 import { capitalize } from '../../../utils';
 import TextButton from '../textbuton';
 
@@ -15,6 +16,7 @@ const useStyles = makeStyles({
 
 export default function RecursiveTreeView(props) {
   const classes = useStyles();
+  const { location } = globalHistory;
   const [expanded, setExpanded] = React.useState(['laptop', ...props.expands]);
 
   const handleToggle = (event, nodeIds) => {
