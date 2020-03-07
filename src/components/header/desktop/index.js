@@ -37,6 +37,7 @@ export default function Desktop(props) {
           )}
         </TextButton>
         <TextButton
+          to="#footer"
           className={classes.menuAppbar}
         >
           About Us

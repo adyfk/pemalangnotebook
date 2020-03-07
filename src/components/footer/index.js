@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core';
 
 export default function Footer() {
   return (
-    <Grid container>
+    <Grid container id="footer">
       <Grid item lg={12} md={12} xs={12} align="center">
         <img src="" alt="test" />
       </Grid>
