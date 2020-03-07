@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 function TextButon({
-  children, to, style, ...rest
+  children, to, style, display, ...rest
 }) {
   const props = {};
   if (to) {
@@ -11,6 +11,8 @@ function TextButon({
       navigate(to);
     };
   }
+  if (display === 'block') { props.component = 'div'; }
+  if (display === 'inline') { props.component = 'span'; }
   return (
     <Typography
       {...props}

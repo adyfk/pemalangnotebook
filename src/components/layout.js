@@ -6,8 +6,10 @@ import { CssBaseline } from '@material-ui/core';
 import Header from './header/index';
 import Container from './elements/container';
 import Footer from './footer';
+import SearchPage from './searchPage';
 
-const Layout = ({ container, children }) => {
+function Layout({ container, children }) {
+  const search = React.useState('');
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,13 +23,17 @@ const Layout = ({ container, children }) => {
   return (
     <>
       <CssBaseline />
-      <Header siteTitle={data.site.siteMetadata.title} />
-      {container && <Container>{children}</Container>}
-      {container || children}
+      <Header search={search} siteTitle={data.site.siteMetadata.title} />
+      {search[0] ? <SearchPage search={search} /> : (
+        <>
+          {container && <Container>{children}</Container>}
+          {container || children}
+        </>
+      )}
       <Footer />
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

@@ -59,6 +59,7 @@ module.exports = {
           '**/users',
           '**/laptop',
           '**/other',
+          '**/search',
         ],
         excludedRoutes: ['**/posts/1456'],
         keepMediaSizes: false,

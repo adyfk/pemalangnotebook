@@ -1,26 +1,23 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-const Logo = () => {
+
+function Logo(props) {
+  const data = useStaticQuery(graphql`
+  query {
+    imageSharp(original: { src: { regex: "/logo-pemalang-notebook/" } }) {
+      original {
+        src
+      }
+    }
+  }`);
+
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          imageSharp(original: { src: { regex: "/logo-pemalang-notebook/" } }) {
-            original {
-              src
-            }
-          }
-        }
-      `}
-      render={data => (
-        <img
-          alt="logo-pemalangnotebook"
-          src={data.imageSharp.original.src}
-        ></img>
-      )}
-    ></StaticQuery>
-  )
+    <img
+      {...props}
+      alt="logo-pemalangnotebook"
+      src={data.imageSharp.original.src}
+    />
+  );
 }
-
-export default Logo
+export default Logo;
