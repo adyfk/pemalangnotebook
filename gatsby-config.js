@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'http://pemalangnotebookcom.local/',
+        baseUrl: 'http://78bd6e65.ngrok.io/',
         protocol: 'http',
         restApiRoutePrefix: 'wp-json',
         hostingWPCOM: false,
