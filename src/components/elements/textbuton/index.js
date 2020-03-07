@@ -3,13 +3,9 @@ import { navigate } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
 
 function TextButon({
-  children, to, ...rest
+  children, to, style, ...rest
 }) {
-  const props = {
-    classes: rest.classes || {},
-    className: rest.className || '',
-    variant: rest.variant,
-  };
+  const props = {};
   if (to) {
     props.onClick = () => {
       navigate(to);
@@ -17,14 +13,21 @@ function TextButon({
   }
   return (
     <Typography
+      {...props}
+      {...rest}
       style={{
+        ...style,
         cursor: 'pointer',
       }}
-      {...props}
     >
       {children}
     </Typography>
   );
 }
-
+TextButon.defaultValues = {
+  propTypography: {},
+  classes: {},
+  className: '',
+  style: {},
+};
 export default TextButon;

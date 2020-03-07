@@ -1,41 +1,14 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import InputBase from '@material-ui/core/InputBase';
-import SearchIcon from '@material-ui/icons/Search';
 import useStyles from './style';
-import TextButton from '../elements/textbuton';
-import Logo from './Image/Logo';
+import Desktop from './desktop';
 
 export default function Header() {
   const classes = useStyles();
   return (
     <div className={classes.grow}>
       <AppBar classes={{ root: classes.appBar }} position="static">
-        <Toolbar>
-          <Logo />
-          <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
-            <TextButton to="/" className={classes.menuAppbar}>
-              Dashboard
-            </TextButton>
-            <TextButton className={classes.menuAppbar}>Product</TextButton>
-            <TextButton className={classes.menuAppbar}>About Use</TextButton>
-          </div>
-          <div className={classes.searchDesktop}>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-          </div>
-        </Toolbar>
+        <Desktop />
       </AppBar>
     </div>
   );
