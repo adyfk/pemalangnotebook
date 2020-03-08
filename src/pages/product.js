@@ -2,6 +2,7 @@ import React from 'react';
 import { Router } from '@reach/router';
 import { Grid } from '@material-ui/core';
 import { useStaticQuery, graphql } from 'gatsby';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import Accessories from '../container/accessories';
 import Laptop from '../container/laptop';
 import Marchandise from '../container/marchandise';
@@ -9,7 +10,28 @@ import Treeview from '../components/elements/treeviewcategory';
 import BreadCrumb from '../components/elements/breadcrumb';
 import Layout from '../components/layout';
 
-const Product = () => {
+const useStyles = makeStyles(() => ({
+  container: {
+    marginTop: 15,
+  },
+  category: {
+    fontWeight: 600,
+    fontSize: 18,
+    marginLeft: 22,
+  },
+  containerFilter: {
+    border: '1px solid grey',
+    padding: '10px 0px',
+  },
+  treeView: {
+    marginTop: 10,
+    minHeight: 250,
+  },
+}));
+
+
+function Product() {
+  const classes = useStyles();
   const { allWordpressCategory: { nodes } } = useStaticQuery(graphql`
     query{
         allWordpressCategory(filter: {parent_element: {name: {regex: "/LP/"}}}) {
@@ -42,22 +64,28 @@ const Product = () => {
     children: laptopCategory[item].sort().map((name) => ({ name })),
   }));
   return (
-    <Layout>
-      <Grid container>
+    <Layout container>
+      <Grid container spacing={2} className={classes.container}>
         <Grid item lg={12} md={12} xs={12} sm={12}>
           <BreadCrumb />
         </Grid>
         <Grid item lg={3} md={3} xs={12} sm={12}>
-          <Treeview
-            expands={Object.keys(laptopCategory)}
-            data={[
-              { name: 'accessories' },
-              {
-                name: 'laptop',
-                children: childrenLaptop,
-              },
-              { name: 'marchandise' }]}
-          />
+          <div className={classes.containerFilter}>
+            <span className={classes.category}>
+              Category
+            </span>
+            <Treeview
+              classes={{ root: classes.treeView }}
+              expands={Object.keys(laptopCategory)}
+              data={[
+                { name: 'accessories' },
+                {
+                  name: 'laptop',
+                  children: childrenLaptop,
+                },
+                { name: 'marchandise' }]}
+            />
+          </div>
         </Grid>
         <Grid item lg={9} md={9} xs={12} sm={12}>
           <Router basepath="/product">
@@ -69,6 +97,6 @@ const Product = () => {
       </Grid>
     </Layout>
   );
-};
+}
 
 export default Product;

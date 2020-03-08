@@ -9,15 +9,13 @@ import { globalHistory } from '@reach/router';
 import { capitalize } from '../../../utils';
 import TextButton from '../textbuton';
 
-const useStyles = makeStyles({
-  root: {
-  },
-});
+const useStyles = makeStyles(() => ({
+}));
 
-export default function RecursiveTreeView(props) {
+export default function RecursiveTreeView({ expands, data, ...props }) {
   const classes = useStyles();
   const { location } = globalHistory;
-  const [expanded, setExpanded] = React.useState(['laptop', ...props.expands]);
+  const [expanded, setExpanded] = React.useState(['laptop', ...expands]);
 
   const handleToggle = (event, nodeIds) => {
     setExpanded(nodeIds);
@@ -37,7 +35,11 @@ export default function RecursiveTreeView(props) {
   const renderTree = (nodes) => {
     const sub = Array.isArray(nodes.children);
     return (
-      <TreeItem key={nodes.name} nodeId={nodes.name} label={label({ nodes, bool: sub })}>
+      <TreeItem
+        key={nodes.name}
+        nodeId={nodes.name}
+        label={label({ nodes, bool: sub })}
+      >
         {sub ? nodes.children.map((node) => renderTree({ ...node, parent: nodes.name })) : null}
       </TreeItem>
     );
@@ -45,12 +47,13 @@ export default function RecursiveTreeView(props) {
 
   return (
     <TreeView
+      {...props}
       className={classes.root}
       onNodeToggle={handleToggle}
-      defaultExpanded={['laptop', ...props.expands]}
+      defaultExpanded={['laptop', ...expands]}
       defaultSelected={[location.pathname.split('/').pop()]}
     >
-      {props.data.map((data) => renderTree(data))}
+      {data.map((item) => renderTree(item))}
     </TreeView>
 
 

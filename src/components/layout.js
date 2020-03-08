@@ -8,7 +8,7 @@ import Container from './elements/container';
 import Footer from './footer';
 import SearchPage from './searchPage';
 
-function Layout({ container, children }) {
+function Layout({ container, children, ...props }) {
   const search = React.useState('');
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -21,7 +21,7 @@ function Layout({ container, children }) {
   `);
 
   return (
-    <>
+    <main {...props}>
       <CssBaseline />
       <Header search={search} siteTitle={data.site.siteMetadata.title} />
       {search[0] ? <SearchPage search={search} /> : (
@@ -31,7 +31,7 @@ function Layout({ container, children }) {
         </>
       )}
       <Footer />
-    </>
+    </main>
   );
 }
 
