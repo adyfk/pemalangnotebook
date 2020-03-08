@@ -65,7 +65,7 @@ function Product() {
   }));
   return (
     <Layout container>
-      <Grid container spacing={2} className={classes.container}>
+      <Grid container spacing={3} className={classes.container}>
         <Grid item lg={12} md={12} xs={12} sm={12}>
           <BreadCrumb />
         </Grid>

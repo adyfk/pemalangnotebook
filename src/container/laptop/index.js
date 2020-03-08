@@ -1,5 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Grid } from '@material-ui/core';
+import CardProduct from '../../components/elements/card';
+import TextButon from '../../components/elements/textbuton';
 
 export default function Laptop(props) {
   const { allWordpressWpLaptop: { nodes } } = useStaticQuery(graphql`
@@ -30,21 +33,24 @@ export default function Laptop(props) {
   `);
   const data = nodes.filter((item) => (item.categories[0].parent_element.slug === props.brand && item.categories[0].slug === props.series));
   return (
-    <div>
-      {data.map((laptop) => {
-        const image = laptop.acf.image1;
-        const src = image ? image.url : '';
-        const alt = image ? image.alt : '';
+    <Grid container>
+      {data.map(({ acf, title, slug }) => {
+        const image = acf.image1;
         return (
-          <Link to={`/product/${props.brand}/${props.series}/${laptop.slug}`}>
-            <div key={laptop.slug}>
-              <img alt={alt} src={src} />
-              <div>{laptop.title}</div>
-            </div>
-          </Link>
+          <Grid key={slug} lg={3} md={3} sm={12} xs={12} item>
+            <TextButon display="block" to={`/product/${props.brand}/${props.series}/${slug}`}>
+              <CardProduct
+                title={title}
+                acf={{
+                  ...acf,
+                  image,
+                }}
+              />
+            </TextButon>
+
+          </Grid>
         );
       })}
-      <div />
-    </div>
+    </Grid>
   );
 }

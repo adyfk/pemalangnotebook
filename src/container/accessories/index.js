@@ -1,5 +1,8 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Grid } from '@material-ui/core';
+import CardProduct from '../../components/elements/card';
+import TextButon from '../../components/elements/textbuton';
 
 export default function Accessories() {
   const { allWordpressWpOther: { nodes } } = useStaticQuery(graphql`
@@ -20,9 +23,6 @@ export default function Accessories() {
               url
               alt
             }
-            image2
-            image3
-            image4
           }
           modified
         }
@@ -31,21 +31,23 @@ export default function Accessories() {
     `);
   const data = nodes.filter((item) => (item.categories[0].slug === 'accessories'));
   return (
-    <div>
-      {data.map((item) => {
-        const image = item.acf.image1;
-        const src = image ? image.url : '';
-        const alt = image ? image.alt : '';
+    <Grid container>
+      {data.map(({ acf, title, slug }) => {
+        const image = acf.image1;
         return (
-          <Link to={`/product/accessories/${item.slug}`}>
-            <div key={item.slug}>
-              <img alt={alt} src={src} />
-              <div>{item.title}</div>
-            </div>
-          </Link>
+          <Grid key={slug} lg={3} md={3} sm={12} xs={12} item>
+            <TextButon to={`/product/accessories/${slug}`}>
+              <CardProduct
+                title={title}
+                acf={{
+                  ...acf,
+                  image,
+                }}
+              />
+            </TextButon>
+          </Grid>
         );
       })}
-      <div />
-    </div>
+    </Grid>
   );
 }
