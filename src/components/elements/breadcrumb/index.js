@@ -19,9 +19,9 @@ export default function BreadCrumb() {
         Array.from({ length: index + 1 }).forEach((item, i) => {
           linkPath.push(locationPath[i]);
         });
-        return <Typography>{capitalize(path)}</Typography>;
+        return <Typography>{capitalize(path || '')}</Typography>;
       })}
-      <Typography color="textPrimary">{capitalize(locationNow)}</Typography>
+      <Typography color="textPrimary">{capitalize(locationNow || '')}</Typography>
     </Breadcrumbs>
   );
 }

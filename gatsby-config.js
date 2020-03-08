@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-material-ui',
+    '@bumped-inc/gatsby-plugin-optional-chaining',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

@@ -14,7 +14,10 @@ const useStyles = makeStyles(() => ({
   },
   containerFooter: {
     paddingTop: 20,
-    borderTop: '1px solid red',
+    marginTop: 40,
+    // borderTop: '0.2px solid grey',
+    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
+    backgroundColor: 'white',
   },
   containerContact: {
     paddingTop: 0, paddingBottom: 10, margin: '20px 0px 20px 0px',

@@ -70,7 +70,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   const { allWordpressWpLaptop } = result.data;
-  const LaptopDetail = path.resolve('./src/components/template/detail-product/component.js');
+  const LaptopDetail = path.resolve('./src/components/template/detail-product/index.js');
   allWordpressWpLaptop.nodes.forEach((node) => {
     const { ...context } = node;
     const brand = context.categories[0].parent_element.slug;
