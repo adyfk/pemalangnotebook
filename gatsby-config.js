@@ -33,7 +33,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         baseUrl: 'https://pemalangnotebook.my.id/',
-        protocol: 'http',
+        protocol: 'https',
         restApiRoutePrefix: 'wp-json',
         hostingWPCOM: false,
         useACF: true,

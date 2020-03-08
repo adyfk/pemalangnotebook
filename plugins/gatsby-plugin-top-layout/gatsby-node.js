@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    {
+    query {
         allWordpressWpLaptop {
             nodes {
               slug
@@ -71,6 +71,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { allWordpressWpLaptop } = result.data;
   const LaptopDetail = path.resolve('./src/components/template/detail-product/index.js');
+  console.log(allWordpressWpLaptop);
   allWordpressWpLaptop.nodes.forEach((node) => {
     const { ...context } = node;
     const brand = context.categories[0].parent_element.slug;
@@ -95,6 +96,7 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
   const { allWordpressWpOther } = result.data;
+  console.log(allWordpressWpOther);
   allWordpressWpOther.nodes.forEach((node) => {
     const { ...context } = node;
     const category = context.categories[0].slug;
