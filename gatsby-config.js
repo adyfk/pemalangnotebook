@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
     description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: '@gatsbyjs',
-    siteUrl: 'http://pemalangnotebookcom.local',
+    siteUrl: 'https://pemalangnotebook.my.id',
   },
   plugins: [
     'gatsby-plugin-top-layout',
@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'http://pemalangnotebookcom.local/',
+        baseUrl: 'https://pemalangnotebook.my.id/',
         protocol: 'http',
         restApiRoutePrefix: 'wp-json',
         hostingWPCOM: false,
