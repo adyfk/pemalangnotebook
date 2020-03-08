@@ -6,7 +6,7 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import TextButton from '../../elements/textbuton';
 import useStyles from './style';
-import Logo from '../Image/Logo';
+import Logo from '../../Image/Logo';
 import MenuLaptop from './menu';
 
 export default function Desktop(props) {

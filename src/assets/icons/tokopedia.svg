@@ -1,0 +1,138 @@
+<svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M11.4998 0C5.14866 0 0 5.14901 0 11.4998C0 17.8505 5.14866 23 11.4998 23C17.8509 23 23 17.8508 23 11.4998C23 5.1487 17.851 0 11.4998 0Z"/>
+<rect x="4.09923" y="16.4889" width="14.3282" height="2.51217" fill="url(#pattern0)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.4995 7.66249C14.3441 6.16303 13.0742 4.99701 11.5358 5.00001C9.99773 5.003 8.73318 6.16403 8.5618 7.65517L8.52918 8.00025L9.45563 8.05682L9.47327 7.71474C9.61237 6.63756 10.416 5.91579 11.5342 5.91346C12.652 5.91146 13.4756 6.64389 13.597 7.73304L13.6546 8.19359L14.5558 8.12904L14.4995 7.66249Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.10856 7.52313C5.90724 7.52512 5.74551 7.68885 5.74584 7.89017L5.75615 13.2318L5.75815 14.1868L5.75882 14.4421L5.76514 17.7421C5.76547 17.9445 5.92986 18.1082 6.13219 18.1079L9.432 18.1015L10.0084 18.1005L13.6656 18.0935C15.6825 18.0895 17.3295 16.436 17.3258 14.4198L17.3251 14.1645L17.3135 8.16837C17.3128 7.80099 17.0157 7.50316 16.6483 7.50183C15.9764 7.4995 15.2885 7.49817 14.6217 7.5371L13.79 7.61031C13.048 7.70216 12.2979 7.86954 11.6989 8.17236C11.5927 8.22593 11.4679 8.2266 11.3621 8.17169C10.7342 7.84491 10.051 7.6762 9.2726 7.59035L8.44066 7.52912C7.6603 7.49384 6.8633 7.51547 6.10856 7.52313Z" fill="#ECECEC"/>
+<rect x="6.10971" y="18.0674" width="3.35943" height="0.0685338" fill="url(#pattern1)"/>
+<rect x="5.72204" y="7.46344" width="11.6444" height="7.01675" fill="url(#pattern2)"/>
+<rect x="10.3561" y="5.6322" width="11.6444" height="10.6767" fill="url(#pattern3)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.80209 18.1066L9.43135 18.1016L10.0077 18.1006L13.6649 18.0936C14.5588 18.0919 15.3791 17.7661 16.0153 17.2294C15.2676 15.5003 13.5445 14.2924 11.5412 14.296C9.22004 14.3004 7.28228 15.9303 6.80209 18.1066Z" fill="white"/>
+<rect x="6.75882" y="14.4332" width="6.95193" height="3.70328" fill="url(#pattern4)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5485 18.0974L13.7075 18.0615C14.589 18.0598 15.3914 17.7474 16.0153 17.2296C16.819 16.5627 17.3271 15.5547 17.3248 14.4197L17.3241 14.1644L17.3118 7.80389C17.3115 7.63817 17.1774 7.50373 17.0116 7.50306C16.2256 7.5014 15.4087 7.49108 14.6207 7.53701L13.789 7.61021C12.9754 7.71071 12.1524 7.90239 11.5292 8.26344L11.5485 18.0974Z" fill="#E1DFDF"/>
+<rect x="11.4965" y="7.46228" width="5.87358" height="10.6767" fill="url(#pattern5)"/>
+<rect x="11.4965" y="11.6844" width="0.0685353" height="0.438257" fill="url(#pattern6)"/>
+<rect x="11.4965" y="9.23987" width="5.35341" height="5.32753" fill="url(#pattern7)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.1598 9.61182C15.4233 9.60949 16.4503 10.6324 16.4526 11.8956C16.4549 13.1591 15.4323 14.1857 14.1684 14.1884C12.9042 14.1907 11.8783 13.1678 11.8759 11.9046C11.8736 10.6411 12.8959 9.61448 14.1598 9.61182Z"/>
+<rect x="11.8211" y="11.2285" width="4.68153" height="3.01258" fill="url(#pattern8)"/>
+<rect x="11.8436" y="11.2509" width="4.65985" height="2.97334" fill="url(#pattern9)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.9018 10.4178C14.7341 10.3329 15.4779 10.9386 15.5624 11.7698C15.6473 12.6024 15.0409 13.3458 14.209 13.4307C13.3764 13.5155 12.6333 12.9099 12.5484 12.077C12.5202 11.7998 12.5691 11.5322 12.6772 11.2953C12.812 11.5505 13.0912 11.7106 13.3964 11.6793C13.797 11.6384 14.0892 11.281 14.0483 10.8803C14.03 10.7 13.9471 10.5419 13.826 10.4268C13.8509 10.4231 13.8765 10.4204 13.9018 10.4178Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5485 18.0975L13.6782 18.0935C14.5721 18.0918 15.379 17.7664 16.0153 17.2296C15.2756 15.5199 13.5158 14.3196 11.5411 14.2969L11.5485 18.0975Z" fill="#ECECEC"/>
+<rect x="11.5191" y="14.4332" width="4.52633" height="3.70328" fill="url(#pattern10)"/>
+<rect x="10.1126" y="14.1727" width="0.307439" height="0.330041" fill="url(#pattern11)"/>
+<rect x="10.2659" y="14.3887" width="1.3221" height="1.3673" fill="url(#pattern12)"/>
+<rect x="11.5191" y="14.1949" width="1.45303" height="1.56143" fill="url(#pattern13)"/>
+<rect x="12.8804" y="14.1277" width="0.0910743" height="0.136169" fill="url(#pattern14)"/>
+<rect x="11.5191" y="14.4114" width="1.30402" height="1.34457" fill="url(#pattern15)"/>
+<rect x="6.21788" y="9.23987" width="5.3493" height="5.32753" fill="url(#pattern16)"/>
+<rect x="11.4965" y="11.8604" width="0.0685353" height="0.0910723" fill="url(#pattern17)"/>
+<rect x="10.1126" y="14.1729" width="0.0685353" height="0.0685338" fill="url(#pattern18)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.89092 9.61182C10.1545 9.60949 11.1814 10.6324 11.1837 11.8956C11.1861 13.1591 10.1635 14.1857 8.89957 14.1884C7.63568 14.1907 6.6094 13.1678 6.60707 11.9046C6.60474 10.6411 7.6267 9.61448 8.89092 9.61182Z"/>
+<rect x="6.56498" y="11.2285" width="4.67793" height="3.01258" fill="url(#pattern19)"/>
+<rect x="6.56498" y="11.2509" width="4.65985" height="2.97334" fill="url(#pattern20)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.14016 10.4102C9.97676 10.4086 10.6566 11.0854 10.658 11.921C10.6596 12.7579 9.98242 13.4374 9.14582 13.4388C8.30889 13.4404 7.62969 12.7636 7.62803 11.9267C7.62736 11.6478 7.7029 11.3866 7.83401 11.1619C7.94283 11.4292 8.20473 11.6165 8.51121 11.6158C8.91387 11.6152 9.24033 11.2887 9.23966 10.8857C9.23933 10.7044 9.17277 10.539 9.06362 10.4122C9.08891 10.4102 9.11487 10.4102 9.14016 10.4102Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5488 15.5188C11.5485 15.5188 11.5485 15.5188 11.5481 15.5188C11.5465 15.5188 11.5451 15.5188 11.5435 15.5188C11.2616 15.5114 10.614 14.8576 10.3924 14.4346C10.3731 14.398 10.3571 14.3631 10.3448 14.3304C10.3718 14.4017 10.416 14.4835 10.4726 14.5704C10.8227 14.778 11.3568 15.0762 11.5425 15.0762C11.7335 15.0762 12.2247 14.8116 12.5688 14.6073L12.5761 14.5963L12.5791 14.592L12.5794 14.5917L12.5821 14.5877L12.5897 14.576L12.595 14.5677L12.5974 14.5637L12.6024 14.5557L12.6047 14.5517L12.6087 14.5451L12.6173 14.5311L12.6213 14.5244L12.6237 14.5205L12.63 14.5098L12.6356 14.5002L12.643 14.4872L12.6476 14.4789L12.6526 14.4699L12.6546 14.4659L12.6589 14.4579L12.6666 14.4436C12.6772 14.4233 12.6872 14.4033 12.6962 14.3837L12.6985 14.3787L12.6992 14.3774L12.6999 14.3764L12.7005 14.375L12.7012 14.3737L12.7019 14.3727L12.7025 14.3714L12.7032 14.37L12.7039 14.369L12.7045 14.3677L12.7052 14.3664L12.7059 14.3654L12.7065 14.3641L12.7075 14.3617L12.7065 14.3641L12.7059 14.3654L12.7052 14.3664L12.7045 14.3677L12.7039 14.369L12.7032 14.37L12.7025 14.3714L12.7019 14.3727L12.7012 14.3737L12.7005 14.375L12.6999 14.3764L12.6992 14.3774L12.6985 14.3787L12.6962 14.3837C12.6876 14.4023 12.6782 14.4213 12.6683 14.4403L12.6666 14.4436C12.6639 14.4482 12.6616 14.4532 12.6589 14.4579L12.6546 14.4659L12.6526 14.4699L12.6476 14.4789L12.643 14.4872L12.6356 14.5002L12.63 14.5098L12.6237 14.5205L12.6213 14.5244L12.6173 14.5311L12.6087 14.5451L12.6047 14.5517L12.6024 14.5557L12.5974 14.5637L12.595 14.5677L12.5897 14.576L12.5821 14.5877L12.5794 14.5917L12.5791 14.592L12.5761 14.5963L12.5688 14.6076C12.2902 15.0329 11.7854 15.5184 11.5757 15.5184C11.5754 15.5184 11.5751 15.5184 11.5747 15.5184C11.5698 15.5184 11.5654 15.5184 11.5614 15.5188C11.5578 15.5188 11.5535 15.5188 11.5488 15.5188Z" fill="url(#paint0_linear)"/>
+<rect x="10.3065" y="14.3032" width="2.43081" height="0.803511" fill="url(#pattern21)"/>
+<rect x="4.00009" y="8.36108" width="5.46178" height="0.762757" fill="url(#pattern22)"/>
+<rect x="11.6903" y="7.65894" width="5.46178" height="0.762757" fill="url(#pattern23)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5425 14.9129C11.3325 14.9129 10.6752 14.5308 10.3448 14.3305C10.3212 14.3162 10.2992 14.3029 10.2792 14.2906L10.2753 14.2883L10.2713 14.2859L10.2703 14.2853L10.2673 14.2836L10.2636 14.2813L10.2599 14.2789L10.2563 14.2766L10.254 14.2753L10.2526 14.2746L10.249 14.2723L10.2453 14.27L10.242 14.268L10.2386 14.266L10.2353 14.264L10.232 14.262L10.2257 14.258L10.2243 14.2573L10.2223 14.256L10.2193 14.254L10.2164 14.252L10.2134 14.25L10.211 14.2487L10.2104 14.2483L10.2077 14.2467L10.205 14.245L10.2024 14.2433L10.1997 14.2417L10.1994 14.2413L10.197 14.24L10.1944 14.2383L10.1921 14.2367L10.1897 14.235L10.1884 14.2343L10.1874 14.2337L10.1851 14.2324L10.1831 14.231L10.1811 14.2297L10.1771 14.227L10.1751 14.2257L10.1731 14.2247L10.1714 14.2237L10.1711 14.2234L10.1698 14.2227L10.1681 14.2217L10.1664 14.2207L10.1648 14.2197L10.1555 14.214L10.1548 14.2137L10.1545 14.2134L10.1535 14.2127H10.1531H10.1528H10.1525H10.1521H10.1518H10.1515H10.1518H10.1521H10.1525H10.1528H10.1531H10.1535L10.1545 14.2134L10.1548 14.2137L10.1648 14.22L10.1664 14.221L10.1681 14.222L10.1698 14.223L10.1711 14.2237L10.1714 14.224L10.1731 14.225L10.1751 14.226L10.1771 14.2274L10.1811 14.23L10.1831 14.2314L10.1851 14.2327L10.1874 14.234L10.1884 14.2347L10.1897 14.2353L10.1921 14.237L10.1944 14.2387L10.197 14.2403L10.1994 14.2417L10.1997 14.242L10.2024 14.2437L10.205 14.2453L10.2077 14.247L10.2104 14.2487L10.211 14.249L10.2134 14.2503L10.2164 14.2523L10.2193 14.2543L10.2223 14.2563L10.2243 14.2576L10.2257 14.2583L10.232 14.2623L10.2353 14.2643L10.2386 14.2663L10.242 14.2683L10.2453 14.2703L10.249 14.2726L10.2526 14.2749L10.254 14.2756L10.2563 14.2769L10.2599 14.2793L10.2636 14.2816L10.2673 14.2839L10.2703 14.2856L10.2713 14.2863L10.2753 14.2886L10.2792 14.2909C10.5738 14.4716 11.2912 14.8976 11.5295 14.9125C11.6719 14.5315 11.7817 13.6021 11.832 13.1129C11.7784 13.1019 11.7292 13.0939 11.6852 13.0883H11.6849L11.6782 13.0873H11.6776L11.6749 13.087H11.6742L11.6716 13.0866H11.6706L11.6669 13.0863L11.6646 13.086H11.6636L11.6613 13.0856H11.6599L11.6576 13.0853H11.6563L11.6543 13.085H11.6529L11.6509 13.0846L11.6496 13.0843L11.6476 13.084H11.646L11.6443 13.0836H11.6426H11.641L11.6393 13.0833H11.638L11.6363 13.083H11.635L11.633 13.0826H11.6317L11.6297 13.0823H11.6287L11.6267 13.082H11.6257L11.6237 13.0816H11.6227L11.6203 13.0813H11.6197L11.6173 13.081H11.6167L11.6143 13.0806H11.6137L11.6113 13.0803H11.6107L11.6084 13.08H11.608L11.6057 13.0796H11.6054L11.6027 13.0793H11.6024L11.5997 13.079L11.597 13.0786L11.5944 13.0783L11.597 13.0786L11.5997 13.079L11.6024 13.0793H11.6027L11.6054 13.0796H11.6057L11.608 13.08H11.6084L11.6107 13.0803H11.6113L11.6137 13.0806H11.6143L11.6167 13.081H11.6173L11.6197 13.0813H11.6203L11.6227 13.0816H11.6237L11.6257 13.082H11.6267L11.6287 13.0823H11.6297L11.6317 13.0826H11.633L11.635 13.083H11.6363L11.638 13.0833H11.6393L11.641 13.0836H11.6426H11.6443L11.646 13.084H11.6476L11.6496 13.0843L11.6509 13.0846L11.6529 13.085H11.6543L11.6563 13.0853H11.6576L11.6599 13.0856H11.6613L11.6636 13.086H11.6646L11.6669 13.0863L11.6706 13.0866H11.6716L11.6742 13.087H11.6749L11.6776 13.0873H11.6782L11.6849 13.0883H11.6852C11.7265 13.0936 11.7731 13.1009 11.8233 13.1113C11.9684 13.1409 12.1445 13.1934 12.3152 13.2886C12.3331 13.2986 12.3508 13.3089 12.3684 13.3199C12.5202 13.4134 12.6643 13.5422 12.7751 13.7199C12.787 13.7389 12.7984 13.7582 12.8093 13.7785C12.8553 13.862 12.8939 13.9555 12.9235 14.06C12.9315 14.0956 12.9341 14.1332 12.9321 14.1721C12.9315 14.1864 12.9301 14.2011 12.9281 14.216C12.9261 14.218 12.9232 14.2204 12.9188 14.2234C12.8899 14.2453 12.8113 14.2966 12.7049 14.3621C12.3711 14.5678 11.7608 14.9129 11.5425 14.9129ZM11.5298 14.9122C11.5524 14.455 11.5604 14.1109 11.5604 13.8523C11.5604 14.1109 11.5524 14.455 11.5298 14.9122Z" fill="url(#paint1_linear)"/>
+<rect x="10.1126" y="13.0498" width="1.47585" height="1.90842" fill="url(#pattern24)"/>
+<rect x="11.5191" y="13.0502" width="0.113627" height="0.0685338" fill="url(#pattern25)"/>
+<rect x="11.474" y="13.0498" width="0.397675" height="1.90842" fill="url(#pattern26)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4669 13.0798L11.459 13.0806L11.4669 13.0798Z" fill="#FDFDFD"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern4" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern6" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1"/>
+</pattern>
+<pattern id="pattern7" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern8" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern9" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern10" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern11" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image2"/>
+</pattern>
+<pattern id="pattern12" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern13" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3"/>
+</pattern>
+<pattern id="pattern14" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1"/>
+</pattern>
+<pattern id="pattern15" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3"/>
+</pattern>
+<pattern id="pattern16" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern17" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1"/>
+</pattern>
+<pattern id="pattern18" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1"/>
+</pattern>
+<pattern id="pattern19" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern20" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern21" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3"/>
+</pattern>
+<pattern id="pattern22" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern23" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0"/>
+</pattern>
+<pattern id="pattern24" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image3"/>
+</pattern>
+<pattern id="pattern25" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1"/>
+</pattern>
+<pattern id="pattern26" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image4"/>
+</pattern>
+<linearGradient id="paint0_linear" x1="11.5244" y1="13.4807" x2="11.5266" y2="15.4889" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9ED2E"/>
+<stop offset="1" stop-color="#F79220"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="11.5596" y1="13.3334" x2="11.5151" y2="15.5128" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F9ED2E"/>
+<stop offset="1" stop-color="#F79220"/>
+</linearGradient>
+<image id="image0" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAbwBvAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA"/>
+<image id="image1" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAaQBpAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA"/>
+<image id="image2" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAbQBtAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA"/>
+<image id="image3" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAbgBuAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA"/>
+<image id="image4" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEAbABsAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA"/>
+</defs>
+</svg>

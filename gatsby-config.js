@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
     description: 'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
     author: '@gatsbyjs',
-    // siteUrl: 'http://pemalangnotebookcom.local',
+    siteUrl: 'http://pemalangnotebookcom.local',
   },
   plugins: [
     'gatsby-plugin-top-layout',
@@ -13,6 +13,14 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-material-ui',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
