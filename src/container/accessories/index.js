@@ -20,8 +20,8 @@ export default function Accessories() {
             price
             available
             image1{
-              url
-              alt
+              source_url
+              alt_text
             }
           }
           modified
@@ -36,7 +36,7 @@ export default function Accessories() {
         const image = acf.image1;
         return (
           <Grid key={slug} lg={3} md={3} sm={12} xs={12} item>
-            <TextButon to={`/product/accessories/${slug}`}>
+            <TextButon display="block" to={`/product/accessories/${slug}`}>
               <CardProduct
                 title={title}
                 acf={{

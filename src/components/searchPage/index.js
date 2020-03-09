@@ -21,8 +21,8 @@ export default function SearchPage() {
                 available
                 price
                 image1 {
-                url
-                alt
+                  source_url
+                  alt_text
                 }
             }
             }
@@ -43,8 +43,8 @@ export default function SearchPage() {
             available
             price
             image1 {
-              url
-              alt
+              source_url
+              alt_text
             }
           }
         }

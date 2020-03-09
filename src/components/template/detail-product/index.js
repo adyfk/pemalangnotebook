@@ -22,10 +22,10 @@ export default function LaptopDetail(props) {
           <Grid container>
             <Grid className={classes.containerImage} item lg={12} md={12} sm={12} xs={12}>
               <img
-                alt={image[index]?.alt}
+                alt={image[index]?.['alt_text']}
                 width="100%"
                 className={classes.image}
-                src={image[index]?.url}
+                src={image[index]?.['source_url']}
               />
               {available || (
               <div className={classes.emptyStock}>
@@ -44,8 +44,8 @@ export default function LaptopDetail(props) {
                       className={clsx(classes.imageSmall, {
                         [classes.imageSmallActive]: index === idx,
                       })}
-                      alt={item.alt}
-                      src={item.url}
+                      alt={item.alt_text}
+                      src={item.source_url}
                     />
                   </Grid>
                 ))}

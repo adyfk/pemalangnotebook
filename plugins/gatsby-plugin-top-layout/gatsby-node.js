@@ -5,63 +5,74 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const result = await graphql(`
-    query {
-        allWordpressWpLaptop {
-            nodes {
-              slug
-              title
-              content
-              categories {
-                parent_element {
-                  name
-                  slug
-                }
-                name
-                slug
-              }
-              acf {
-                available
-                price
-                image1{
-                  title
-                  description
-                  url
-                }
-                image2{
-                  title
-                  description
-                  url
-                }
-                image3{
-                  title
-                  description
-                  url
-                }
-                image4{
-                  title
-                  description
-                  url
-                }
-              }
-            }
-          }  
-          allWordpressWpOther {
-            nodes {
-              slug
-              title
-              content
-              categories {
-                name
-                slug
-              }
-              acf {
-                price
-                available
-              }
-              modified
-            }
+  query Myquery {
+    allWordpressWpLaptop {
+      nodes {
+        slug
+        title
+        content
+        categories {
+          parent_element {
+            name
+            slug
           }
+          name
+          slug
+        }
+        acf {
+          available
+          price
+          image1 {
+            alt_text
+            source_url
+          }
+          image2 {
+            alt_text
+            source_url
+          }
+          image3 {
+            alt_text
+            source_url
+          }
+          image4 {
+            alt_text
+            source_url
+          }
+        }
+      }
     }
+    allWordpressWpOther {
+      nodes {
+        slug
+        title
+        content
+        categories {
+          name
+          slug
+        }
+        acf {
+          price
+          available
+          image1 {
+            alt_text
+            source_url
+          }
+          image2 {
+            alt_text
+            source_url
+          }
+          image3 {
+            alt_text
+            source_url
+          }
+          image4 {
+            alt_text
+            source_url
+          }
+        }
+      }
+    }
+  }
   `);
 
   // Check for any errors
@@ -71,7 +82,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { allWordpressWpLaptop } = result.data;
   const LaptopDetail = path.resolve('./src/components/template/detail-product/index.js');
-  console.log(allWordpressWpLaptop);
   allWordpressWpLaptop.nodes.forEach((node) => {
     const { ...context } = node;
     const brand = context.categories[0].parent_element.slug;
@@ -96,7 +106,6 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
   const { allWordpressWpOther } = result.data;
-  console.log(allWordpressWpOther);
   allWordpressWpOther.nodes.forEach((node) => {
     const { ...context } = node;
     const category = context.categories[0].slug;

@@ -23,8 +23,8 @@ export default function Laptop(props) {
             available
             price
             image1{
-              alt
-              url
+              alt_text
+              source_url
             }
           }
         }

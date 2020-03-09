@@ -20,12 +20,9 @@ export default function Marchandise() {
             price
             available
             image1{
-              url
-              alt
+              source_url
+              alt_text
             }
-            image2
-            image3
-            image4
           }
           modified
         }
@@ -39,7 +36,7 @@ export default function Marchandise() {
         const image = acf.image1;
         return (
           <Grid key={slug} lg={3} md={3} sm={12} xs={12} item>
-            <TextButon to={`/product/marchandise/${slug}`}>
+            <TextButon display="block" to={`/product/marchandise/${slug}`}>
               <CardProduct
                 title={title}
                 acf={{
