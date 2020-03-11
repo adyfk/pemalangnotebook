@@ -27,7 +27,7 @@ export default function CardProduct(props) {
           {hover && <Overlay />}
         </div>
       </Grid>
-      <Grid item>
+      <Grid item lg={12} md={12} sm={12} xs={12}>
         <Typography style={{ textOverflow: 'clip', overflow: 'hidden' }}>
           <Box fontSize="16px" fontWeight={500} marginLeft={0.5} lineHeight={1} height={35} p={0.5}>
             {props.title}
