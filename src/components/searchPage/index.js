@@ -1,8 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
+import CloseIcon from '@material-ui/icons/Close';
+import Container from '../elements/container';
+import TextButon from '../elements/textbuton';
+import CardProduct from '../elements/card';
+import SearchNotFound from './Image/SearchNotFound';
 
-export default function SearchPage() {
+export default function SearchPage(props) {
   const { allWordpressWpLaptop, allWordpressWpOther } = useStaticQuery(graphql`
     query{  
         allWordpressWpLaptop {
@@ -51,24 +56,108 @@ export default function SearchPage() {
       }
     }
     `);
-  //   const strRegExPattern = props.search[0];
-  //   console.log(allWordpressWpLaptop.nodes.filter((item) => item.title.match(new RegExp(strRegExPattern, 'gi')) || item.content.match(new RegExp(strRegExPattern, 'gi'))));
-  //   console.log(allWordpressWpOther.nodes.filter((item) => item.title.match(new RegExp(strRegExPattern, 'gi')) || item.content.match(new RegExp(strRegExPattern, 'gi'))));
+  const strRegExPattern = props.search[0];
+  const laptop = allWordpressWpLaptop.nodes.filter((item) => item.title.match(new RegExp(strRegExPattern, 'gi')) || item.content.match(new RegExp(strRegExPattern, 'gi')));
+  const accessories = allWordpressWpOther.nodes.filter((item) => item.title.match(new RegExp(strRegExPattern, 'gi')) || item.content.match(new RegExp(strRegExPattern, 'gi')));
   return (
-    <div>
-      <h2>Search Result</h2>
-      <h3>Laptop Category</h3>
-      <Grid container>
+    <Container bgWhite top sm>
+      <Grid container justify="space-between" alignItems="center">
         <Grid item>
-          {JSON.stringify(allWordpressWpLaptop.nodes, null, 4)}
+          <Typography component="span">
+            <Box fontWeight={500} fontSize={24}>
+              Search Result
+            </Box>
+          </Typography>
+        </Grid>
+        <Grid item>
+          <CloseIcon
+            color="#F79220"
+            cursor="pointer"
+            onClick={() => {
+              props.search[1]('');
+            }}
+          />
         </Grid>
       </Grid>
-      <h3>Accessories and Marchandise</h3>
-      <Grid container>
-        <Grid item>
-          {JSON.stringify(allWordpressWpOther.nodes, null, 4)}
-        </Grid>
-      </Grid>
-    </div>
+      <div style={{ paddingLeft: 25, paddingRight: 25, paddingTop: 10 }}>
+        {laptop.length === 0
+          || (
+            <>
+              <Typography>
+                <Box paddingY={1} fontSize={20}>
+                  Laptop
+                </Box>
+              </Typography>
+              <Grid container style={{ marginBottom: 5 }} spacing={3}>
+                {laptop.map(({
+                  categories, acf, title, slug,
+                }) => {
+                  const image = acf.image1;
+                  return (
+                    <Grid key={slug} lg={2} md={2} sm={12} xs={12} item>
+                      <TextButon display="block" to={`/product/${categories[0].parent_element.slug}/${categories[0].slug}/${slug}`}>
+                        <CardProduct
+                          title={title}
+                          acf={{
+                            ...acf,
+                            image,
+                          }}
+                        />
+                      </TextButon>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </>
+          )}
+        {accessories.length === 0
+          || (
+            <>
+              <Typography>
+                <Box paddingY={1} fontSize={20}>
+                  Accessories
+                </Box>
+              </Typography>
+              <Grid container spacing={3}>
+                {accessories.map(({
+                  categories, acf, title, slug,
+                }) => {
+                  const image = acf.image1;
+                  return (
+                    <Grid key={slug} lg={2} md={2} sm={12} xs={12} item>
+                      <TextButon display="block" to={`/product/${categories[0].slug}/${slug}`}>
+                        <CardProduct
+                          title={title}
+                          acf={{
+                            ...acf,
+                            image,
+                          }}
+                        />
+                      </TextButon>
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </>
+          )}
+      </div>
+      {laptop.length === 0 && accessories.length === 0 && (
+        <div style={{
+          minHeight: '70vh',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+        >
+          <SearchNotFound />
+          <Typography>
+            <Box m={2} fontSize={25} color="#00A9FF">
+              Produk tidak ditemukan
+            </Box>
+          </Typography>
+        </div>
+      )}
+    </Container>
   );
 }

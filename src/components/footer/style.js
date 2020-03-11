@@ -14,7 +14,6 @@ const useStyles = makeStyles(() => ({
   },
   containerFooter: {
     paddingTop: 20,
-    marginTop: 40,
     // borderTop: '0.2px solid grey',
     boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
     backgroundColor: 'white',

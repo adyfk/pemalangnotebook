@@ -33,7 +33,7 @@ export default function Laptop(props) {
   `);
   const data = nodes.filter((item) => (item.categories[0].parent_element.slug === props.brand && item.categories[0].slug === props.series));
   return (
-    <Grid container>
+    <Grid container spacing={3}>
       {data.map(({ acf, title, slug }) => {
         const image = acf.image1;
         return (
@@ -47,7 +47,6 @@ export default function Laptop(props) {
                 }}
               />
             </TextButon>
-
           </Grid>
         );
       })}
