@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import Toolbar from '@material-ui/core/Toolbar';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
+import { globalHistory } from '@reach/router';
 import TextButton from '../../elements/textbuton';
 import useStyles from './style';
 import Logo from '../../Image/Logo';
@@ -11,6 +12,7 @@ import MenuLaptop from './menu';
 
 export default function Desktop(props) {
   const classes = useStyles();
+  const { location } = globalHistory;
   const [productMenu, setProductMenu] = React.useState(false);
   return (
     <Toolbar>
@@ -37,7 +39,7 @@ export default function Desktop(props) {
           )}
         </TextButton>
         <TextButton
-          to="#footer"
+          to={`${location.pathname}#footer`}
           className={classes.menuAppbar}
         >
           About Us
