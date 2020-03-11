@@ -1,37 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
 import CurrencyFormat from 'react-currency-format';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 const useStyles = makeStyles(() => ({
   container: {
-    '&:hover': {
-      boxShadow: 'rgba(0, 0, 0, 0.12) 0px 2px 4px 0px',
-      borderRadius: 5,
-    },
+    boxShadow: 'rgba(0, 0, 0, 0.12) 0px 2px 4px 0px',
+  },
+  containerImage: {
+    position: 'relative',
   },
 }));
 
 export default function CardProduct(props) {
   const classes = useStyles();
+  const [hover, setHover] = useState(false);
   return (
     <Grid
       className={classes.container}
       container
-      direction="column"
-      alignItems="center"
     >
       <Grid item lg={12} md={12} sm={12} xs={12}>
-        <img style={{ borderRadius: '5px 5px 5px 5px' }} width="100%" src={props.acf.image?.['source_url']} alt={props.acf.image?.['alt_text']} />
+        <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className={classes.containerImage}>
+          <img width="100%" src={props.acf.image?.['source_url']} alt={props.acf.image?.['alt_text']} />
+          {!props.acf.available && !hover && <Overlay empty />}
+          {hover && <Overlay />}
+        </div>
       </Grid>
-      <Grid item style={{ marginTop: 5 }}>
-        <Typography align="center" style={{ fontSize: '1.2em', lineHeight: 1 }}>
-          {props.title}
+      <Grid item>
+        <Typography style={{ textOverflow: 'clip', overflow: 'hidden' }}>
+          <Box fontSize="16px" fontWeight={500} marginLeft={0.5} lineHeight={1} height={35} p={0.5}>
+            {props.title}
+          </Box>
         </Typography>
       </Grid>
-      <Grid item style={{ marginTop: 10 }}>
-        <Typography style={{ marginBottom: 15 }} variant="body2">
-          <Box>
+      <Grid item>
+        <Typography style={{ textOverflow: 'clip', overflow: 'hidden' }}>
+          <Box fontSize="14px" p={0.5} marginLeft={0.5} marginY={1}>
             Rp
             {' '}
             <CurrencyFormat value={props.acf.price} displayType="text" thousandSeparator />
@@ -39,5 +44,77 @@ export default function CardProduct(props) {
         </Typography>
       </Grid>
     </Grid>
+  );
+}
+
+const useStylesOverlay = makeStyles(() => ({
+  container: {
+    width: '100%',
+    position: 'absolute',
+    top: 0,
+    height: '100%',
+    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  },
+}));
+
+function Overlay(props) {
+  const classes = useStylesOverlay();
+  return (
+    <div className={classes.container}>
+      {props.empty || <Hover />}
+      {props.empty && <Empty />}
+    </div>
+  );
+}
+
+const useStylesHover = makeStyles(() => ({
+  hoverText: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: 'white',
+    letterSpacing: 1,
+  },
+  border: {
+    border: '2px solid #FFFFFF',
+  },
+}));
+function Hover() {
+  const classes = useStylesHover();
+  return (
+    <Typography className={classes.hoverText}>
+      <Box p={1} className={classes.border}>
+        SEE MORE
+      </Box>
+    </Typography>
+  );
+}
+
+
+const useStylesEmpty = makeStyles(() => ({
+  emptyText: {
+    fontWeight: 'bold',
+    fontSize: 18,
+    color: 'white',
+    letterSpacing: 1,
+  },
+  borderBottom: {
+    width: 20,
+    border: '1px solid #FFFFFF',
+  },
+}));
+
+function Empty() {
+  const classes = useStylesEmpty();
+  return (
+    <>
+      <Typography className={classes.emptyText}>
+        KOSONG
+      </Typography>
+      <div className={classes.borderBottom} />
+    </>
   );
 }

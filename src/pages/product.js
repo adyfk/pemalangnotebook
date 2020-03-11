@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
   },
   treeView: {
     marginTop: 10,
-    minHeight: 250,
+    minHeight: 300,
   },
 }));
 
