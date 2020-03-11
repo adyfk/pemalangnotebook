@@ -10,9 +10,9 @@ import Container from '../components/elements/container';
 const useStyles = makeStyles(() => ({
   cardContainer: {
     marginBottom: 70,
-    paddingTop: 30,
-    paddingLeft: 90,
-    paddingRight: 90,
+    marginTop: 30,
+    marginLeft: 90,
+    marginRight: 90,
   },
   jumbotron: {
     height: '90vh',
@@ -63,26 +63,28 @@ const IndexPage = () => {
             </Box>
           </Typography>
           <hr />
-          <Grid container className={classes.cardContainer} spacing={2}>
-            {nodes.map(({
-              categories, acf, title, slug,
-            }) => {
-              const image = acf.image1;
-              return (
-                <Grid key={slug} lg={3} md={3} sm={6} xs={12} item>
-                  <TextButon display="block" to={`/product/${categories[0].parent_element.slug}/${categories[0].slug}/${slug}`}>
-                    <CardProduct
-                      title={title}
-                      acf={{
-                        ...acf,
-                        image,
-                      }}
-                    />
-                  </TextButon>
-                </Grid>
-              );
-            })}
-          </Grid>
+          <div className={classes.cardContainer}>
+            <Grid container spacing={2}>
+              {nodes.map(({
+                categories, acf, title, slug,
+              }) => {
+                const image = acf.image1;
+                return (
+                  <Grid key={slug} lg={3} md={3} sm={6} xs={12} item>
+                    <TextButon display="block" to={`/product/${categories[0].parent_element.slug}/${categories[0].slug}/${slug}`}>
+                      <CardProduct
+                        title={title}
+                        acf={{
+                          ...acf,
+                          image,
+                        }}
+                      />
+                    </TextButon>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </div>
         </div>
       </Container>
     </Layout>
