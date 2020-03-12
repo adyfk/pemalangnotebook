@@ -9,7 +9,6 @@ import useStyles from './styles';
 
 
 export default function LaptopDetail(props) {
-  console.log(props);
   const classes = useStyles();
   const [index, setIndex] = React.useState(0);
   const { image, available } = props.pageContext.acf;
@@ -60,6 +59,7 @@ export default function LaptopDetail(props) {
               <Box dangerouslySetInnerHTML={{ __html: props.pageContext.title }} fontWeight={500} fontSize="1.8em" />
             </Typography>
             <div dangerouslySetInnerHTML={{ __html: props.pageContext.content }} />
+            {JSON.stringify(props.pageContext.content, null, 4) }
           </div>
         </Grid>
       </Grid>
