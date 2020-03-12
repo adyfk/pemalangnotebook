@@ -15,6 +15,15 @@ module.exports = {
     'gatsby-plugin-material-ui',
     '@bumped-inc/gatsby-plugin-optional-chaining',
     {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: '#F79220',
+        // Disable the loading spinner.
+        // showSpinner: false,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {

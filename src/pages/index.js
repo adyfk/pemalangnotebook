@@ -10,7 +10,7 @@ import Container from '../components/elements/container';
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
     [theme.breakpoints.up('lg')]: {
-      width: '85vw',
+      width: '85vw !important',
     },
     width: '95vw',
     margin: '10px auto',
