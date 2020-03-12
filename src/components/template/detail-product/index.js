@@ -9,6 +9,7 @@ import useStyles from './styles';
 
 
 export default function LaptopDetail(props) {
+  console.log(props);
   const classes = useStyles();
   const [index, setIndex] = React.useState(0);
   const { image, available } = props.pageContext.acf;
