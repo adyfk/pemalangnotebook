@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   image: {
-    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.3)',
+    // boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.3)',
     borderRadius: 7,
   },
   imageSmall: {

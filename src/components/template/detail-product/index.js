@@ -16,7 +16,7 @@ export default function LaptopDetail(props) {
     <Layout container>
       <Grid container spacing={3} className={classes.container}>
         <Grid item lg={12} md={12} sm={12} xs={12}>
-          <BreadCrumb />
+          <BreadCrumb noLast />
         </Grid>
         <Grid style={{ marginBottom: 40 }} item lg={5} md={5} sm={12} xs={12}>
           <Grid container>
@@ -55,8 +55,8 @@ export default function LaptopDetail(props) {
         </Grid>
         <Grid item lg={7} md={7} sm={12} xs={12}>
           <div className={classes.content}>
-            <Typography>
-              <Box dangerouslySetInnerHTML={{ __html: props.pageContext.title }} fontSize="2em" />
+            <Typography className={classes.title}>
+              <Box dangerouslySetInnerHTML={{ __html: props.pageContext.title }} fontWeight={500} fontSize="1.8em" />
             </Typography>
             <div dangerouslySetInnerHTML={{ __html: props.pageContext.content }} />
           </div>

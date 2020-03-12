@@ -5,7 +5,7 @@ import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import TextButton from '../textbuton';
 import { capitalize } from '../../../utils';
 
-export default function BreadCrumb() {
+export default function BreadCrumb(props) {
   const { location } = globalHistory;
   const locationPath = location.pathname.split('/').slice(1);
   const locationNow = locationPath.pop();
@@ -21,7 +21,7 @@ export default function BreadCrumb() {
         });
         return <Typography key={path}>{capitalize(path || '')}</Typography>;
       })}
-      <Typography color="textPrimary">{capitalize(locationNow || '')}</Typography>
+      {props.noLast || <Typography color="textPrimary">{capitalize(locationNow || '')}</Typography> }
     </Breadcrumbs>
   );
 }
