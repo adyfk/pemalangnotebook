@@ -7,12 +7,14 @@ import TextButon from '../components/elements/textbuton';
 import CardProduct from '../components/elements/card';
 import Container from '../components/elements/container';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   cardContainer: {
-    marginBottom: 70,
-    marginTop: 30,
-    marginLeft: 90,
-    marginRight: 90,
+    [theme.breakpoints.up('lg')]: {
+      width: '85vw',
+    },
+    width: '95vw',
+    margin: '10px auto',
+    justifyContent: 'center',
   },
   jumbotron: {
     height: '90vh',
@@ -52,19 +54,18 @@ const IndexPage = () => {
     <Layout>
       <Container top sm>
         <div className={classes.jumbotron} />
-        <div>
+        <div style={{ margin: '50px 0px' }}>
           <Typography>
             <Box
               fontWeight={500}
               fontSize={24}
-              marginTop={4}
             >
               RECENT PRODUCT
             </Box>
           </Typography>
           <hr />
           <div className={classes.cardContainer}>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
               {nodes.map(({
                 categories, acf, title, slug,
               }) => {
