@@ -41,7 +41,8 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 7,
     cursor: 'pointer',
     backgroundColor: 'red',
-    filter: 'grayscale(100%)',
+    filter: 'blur(0.5px)',
+    webkitFilter: 'blur(0.5px)',
   },
   imageSmallActive: {
     boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.3)',
