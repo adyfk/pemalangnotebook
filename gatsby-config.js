@@ -20,7 +20,7 @@ module.exports = {
         // Setting a color is optional.
         color: '#F79220',
         // Disable the loading spinner.
-        // showSpinner: false,
+        showSpinner: false,
       },
     },
     {
