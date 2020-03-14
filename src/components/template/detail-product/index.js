@@ -11,7 +11,7 @@ import useStyles from './styles';
 export default function LaptopDetail(props) {
   const classes = useStyles();
   const [index, setIndex] = React.useState(0);
-  const { image, available } = props.pageContext.acf;
+  const { image } = props.pageContext.acf;
   return (
     <Layout container>
       <Grid container spacing={3} className={classes.container}>
@@ -27,13 +27,13 @@ export default function LaptopDetail(props) {
                 className={classes.image}
                 src={image[index]?.['source_url']}
               />
-              {available || (
+              {/* {available || (
               <div className={classes.emptyStock}>
                 <Typography>
                   <Box fontSize="2.5em" color="white">SOLD OUT</Box>
                 </Typography>
               </div>
-              )}
+              )} */}
             </Grid>
             <Grid item lg={12} md={12} sm={12} xs={12}>
               <Grid wrap="nowrap" style={{ marginTop: 10 }} justify="center" spacing={2} container>
