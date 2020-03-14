@@ -84,7 +84,7 @@ const useStylesTreeViewWrapper = makeStyles(() => ({
   },
   treeView: {
     marginTop: 10,
-    minHeight: 300,
+    minHeight: 100,
   },
 }));
 
