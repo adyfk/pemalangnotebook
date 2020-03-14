@@ -9,6 +9,7 @@ import Marchandise from '../container/marchandise';
 import Treeview from '../components/elements/treeviewcategory';
 import BreadCrumb from '../components/elements/breadcrumb';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -49,27 +50,29 @@ function Product() {
     children: laptopCategory[item].sort().map((name) => ({ name })),
   }));
   return (
-    <Layout container>
-      <Grid container spacing={3} className={classes.container}>
-        <Grid item lg={12} md={12} xs={12} sm={12}>
-          <BreadCrumb />
-        </Grid>
-        <Grid item lg={12} md={12} xs={12} sm={12}>
-          <Grid container spacing={5}>
-            <Grid item lg={3} md={3} xs={12} sm={12}>
-              <TreeViewWrapper laptopCategory={laptopCategory} childrenLaptop={childrenLaptop} />
-            </Grid>
-            <Grid item lg={9} md={9} xs={12} sm={12}>
-              <Router basepath="/product">
-                <Accessories path="/accessories" />
-                <Laptop path="/:brand/:series" />
-                <Marchandise path="/marchandise" />
-              </Router>
+    <SEO title="Pemalang Notebook | Product">
+      <Layout container>
+        <Grid container spacing={3} className={classes.container}>
+          <Grid item lg={12} md={12} xs={12} sm={12}>
+            <BreadCrumb />
+          </Grid>
+          <Grid item lg={12} md={12} xs={12} sm={12}>
+            <Grid container spacing={5}>
+              <Grid item lg={3} md={3} xs={12} sm={12}>
+                <TreeViewWrapper laptopCategory={laptopCategory} childrenLaptop={childrenLaptop} />
+              </Grid>
+              <Grid item lg={9} md={9} xs={12} sm={12}>
+                <Router basepath="/product">
+                  <Accessories path="/accessories" />
+                  <Laptop path="/:brand/:series" />
+                  <Marchandise path="/marchandise" />
+                </Router>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
-    </Layout>
+      </Layout>
+    </SEO>
   );
 }
 const useStylesTreeViewWrapper = makeStyles(() => ({
