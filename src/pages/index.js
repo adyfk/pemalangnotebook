@@ -25,7 +25,7 @@ const IndexPage = () => {
   const classes = useStyles();
   const { allWordpressWpLaptop: { nodes }, wordpressMenusMenusItems: { items } } = useStaticQuery(graphql`
   {
-    allWordpressWpLaptop(sort: {order: ASC, fields: modified}, limit: 8) {
+    allWordpressWpLaptop(sort: {order: DESC, fields: modified}, limit: 4) {
       nodes {
         modified
         slug
