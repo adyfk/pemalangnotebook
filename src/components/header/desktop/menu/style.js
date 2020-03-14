@@ -6,6 +6,7 @@ const useStyles = makeStyles(() => ({
   container: {
     minHeight: 200,
     width: 375,
+    zIndex: 1000,
   },
   containerParentSubList: {
     padding: 5,
