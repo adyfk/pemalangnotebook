@@ -16,6 +16,7 @@ export default function TopLayout(props) {
           href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
           rel="stylesheet"
         />
+        <meta name="google-site-verification" content="sKpYYIMKz_d3kNiOowsfwo_U9j998mlCpu5c9UV2pvI" />
       </Helmet>
       <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
     </>
