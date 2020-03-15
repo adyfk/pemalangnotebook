@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import TextButon from '../components/elements/textbuton';
 import CardProduct from '../components/elements/card';
 import Container from '../components/elements/container';
+import SEO from '../components/seo';
 
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -58,6 +59,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <SEO title="Pemalang Notebook" />
       <Container top sm>
         <img className={classes.jumbotron} alt="jumbotron-pemalangnotebook" width="100%" src={items[0].url.source_url} />
         <div style={{ margin: '30px 0px' }}>

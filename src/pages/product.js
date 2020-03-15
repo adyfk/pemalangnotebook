@@ -9,6 +9,7 @@ import Marchandise from '../container/marchandise';
 import Treeview from '../components/elements/treeviewcategory';
 import BreadCrumb from '../components/elements/breadcrumb';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -93,6 +94,7 @@ function TreeViewWrapper({ laptopCategory, childrenLaptop }) {
   const classes = useStylesTreeViewWrapper();
   return (
     <div className={classes.containerFilter}>
+      <SEO title="Pemalang Notebook | Product" />
       <span className={classes.category}>
         Category
       </span>
