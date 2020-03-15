@@ -9,6 +9,7 @@ const useStyles = makeStyles(() => ({
   },
   containerImage: {
     position: 'relative',
+    zIndex: -1,
   },
 }));
 
