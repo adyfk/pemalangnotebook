@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Typography, Box } from '@material-ui/core';
 import BreadCrumb from '../../elements/breadcrumb';
 import Layout from '../../layout';
+import SEO from '../../seo';
 import useStyles from './styles';
 
 export default function LaptopDetail(props) {
@@ -13,6 +14,7 @@ export default function LaptopDetail(props) {
   const { image } = props.pageContext.acf;
   return (
     <Layout container>
+      <SEO title={props.pageContext.title} />
       <Grid container spacing={3} className={classes.container}>
         <Grid item lg={12} md={12} sm={12} xs={12}>
           <BreadCrumb noLast />
